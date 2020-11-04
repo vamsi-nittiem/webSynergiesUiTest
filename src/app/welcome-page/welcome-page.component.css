@@ -1,0 +1,10 @@
+.koncepts-class {
+  width: 180px;
+  height: 100px;
+  border: 1px solid purple;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  margin: 50px;
+}

@@ -1,0 +1,16 @@
+
+<div style="position: absolute;right: 10px; top: 10px;">
+  <h4 style="margin-right: 20px; display: inline;">[{{sUserName}}]</h4>
+  <button class="btn btn-primary" (click)="logoutClick()">Logout</button>
+</div>
+<h3 style="text-align: center; margin: 30px 0 100px 0;">Welcome to Green Koncepts</h3>
+
+<div style="display: flex; flex-wrap: wrap;">
+  <div class="koncepts-class">Hierarchy</div>
+  <div class="koncepts-class" (click)="onCustomerTileClick()">Customer</div>
+  <div class="koncepts-class"(click)="onOrdersTileClick()">Orders</div>
+  <div class="koncepts-class">Schedules</div>
+  <div class="koncepts-class">Messages</div>
+  <div class="koncepts-class">Email</div>
+</div>
+

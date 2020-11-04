@@ -1,0 +1,28 @@
+<button class="btn btn-primary" style="position: absolute; left: 10px;" (click)="backClick()">Back</button>
+<div style="display: flex; justify-content: center; margin-bottom: 50px;">
+  <h3>Add Customer Details</h3>
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <form style="width: 400px;" (ngSubmit)="onSaveClick(form)" #form="ngForm">
+    <div class="form-group">
+      <label for="customerName">Customer Name</label>
+      <input id="customerName" name="customerName" type="text" class="form-control" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="customerAge">Age</label>
+      <input id="customerAge" name="customerAge" type="number" class="form-control" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="customerAddress">Address</label>
+      <textarea id="customerAddress" name="customerAddress" class="form-control" required ngModel></textarea>
+    </div>
+    <button class="btn btn-success" type="submit" style="margin: 0 100px 0 50px;" [disabled]="form.invalid">Save</button>
+    <button class="btn btn-danger" type="button" (click)="cancelClick()">Cancel</button>
+  </form>
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 50px; color: red;">
+  <h4 *ngIf="!!sSavedResponse">{{sSavedResponse}}</h4>
+</div>
+

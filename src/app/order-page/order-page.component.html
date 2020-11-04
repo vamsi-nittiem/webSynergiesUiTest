@@ -1,0 +1,20 @@
+<button class="btn btn-primary" style="position: absolute; left: 10px;" (click)="backClick()">Back</button>
+<div style="display: flex; justify-content: center; margin-bottom: 50px;">
+  <h3>View Customer Details</h3>
+</div>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Order Date</th>
+    <th>Order Detail</th>
+    <th>Order Amount</th>
+  </tr>
+  <tr *ngFor="let order of ordersData">
+    <td>{{order.customer.customerName}}</td>
+    <td>{{order.orderDate | date}}</td>
+    <td>{{order.orderDetail}}</td>
+    <td>{{order.orderAmount}}</td>
+  </tr>
+</table>
+
